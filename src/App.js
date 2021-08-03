@@ -11,22 +11,27 @@ import authProvider from "./authProvider";
 
 function App() {
   return (
-    <Admin
-      dataProvider={jsonServerProvider("https://jsonplaceholder.typicode.com")}
-      authProvider={authProvider}
-      dashboard={Dashboard}
-    >
-      <Resource
-        name="posts"
-        icon={PostIcon}
-        list={PostList}
-        edit={PostEdit}
-        create={PostCreate}
-        show={PostShow}
-      />
-      <Resource name="users" icon={UserIcon} list={UserList} />
-      <Resource name="comments" list={ListGuesser} />
-    </Admin>
+    <div>
+      <h1>Sesisnando Lagos Rodrigues Neto - POC - Arquitetura Javascript</h1>
+      <Admin
+        dataProvider={jsonServerProvider(
+          "https://jsonplaceholder.typicode.com"
+        )}
+        authProvider={authProvider}
+        dashboard={Dashboard}
+      >
+        <Resource
+          name="posts"
+          icon={PostIcon}
+          list={PostList}
+          edit={PostEdit}
+          create={PostCreate}
+          show={PostShow}
+        />
+        <Resource name="users" icon={UserIcon} list={UserList} />
+        <Resource name="comments" list={ListGuesser} />
+      </Admin>
+    </div>
   );
 }
 
